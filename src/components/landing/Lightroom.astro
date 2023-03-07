@@ -1,5 +1,5 @@
 ---
-import landing from "/public/images/landing.jpeg";
+import landing from "/public/images/tototo.png";
 
 import { Image } from "@astrojs/image/components";
 ---
@@ -7,11 +7,20 @@ import { Image } from "@astrojs/image/components";
 <main role="main" class="w-full lg:col-span-3">
   <section>
     <div class="grid grid-cols-1 gap-3 p-4">
-      <div
-        class="aspect-[280/300] bg-zinc-100 rounded-xl overflow-hidden filter grayscale"
-      >
+      <div class="bg-zinc-100 overflow-hidden">
+        <Image
+          class="aspect-[600/150] object-cover h-full"
+          src={landing}
+          alt="#"
+        />
+      </div>
+      <div class="aspect-[600/150] bg-zinc-100 overflow-hidden">
+        <Image class="object-cover h-full" src={landing} alt="#" />
+      </div>
+      <div class="aspect-[600/150] bg-zinc-100 overflow-hidden">
         <Image class="object-cover h-full" src={landing} alt="#" />
       </div>
     </div>
   </section>
 </main>
+<!--  filter grayscale  rounded-xl aspect-[600/150]-->
